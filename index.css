@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(175, 230, 225);
+}
+.ball-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ball {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin: 0 3px;
+  border-radius: 50%;
+  background-color: rgb(20, 196, 196);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2), inset 0 -5px 5px rgba(0, 0, 0, 0.2);
+  -webkit-animation: jump 0.35s ease-out infinite alternate;
+  animation: jump 0.35s ease-out infinite alternate;
+}
+.ball:nth-child(2) {
+  -webkit-animation-delay: 0.12s;
+  animation-delay: 0.12s;
+}
+.ball:nth-child(3) {
+  -webkit-animation-delay: 0.24s;
+  animation-delay: 0.24s;
+}
+@-webkit-keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
